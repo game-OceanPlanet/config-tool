@@ -1,0 +1,19 @@
+.安装node v8.9.4版本
+
+需要配置的文件
+.同目录拷贝configbak.json文件，改名为config_v1.json，修改相应目录为你电脑上的目录，做为老版本配置
+
+.同目录拷贝configbak.json文件，改名为config_v2.json，修改相应目录为你电脑上的目录，做为新版本配置
+
+json说明：
+{
+  "souceExcel":"", ---你的表格目录路径
+  "resBin":"",---导出的config.bin路径
+  "tsBean":"" ---导出的配置代码路径
+}
+
+.使用：
+执行“build-config_v1.bat”，打包老版本配置
+执行“build-config_v2.bat”，打包新版本配置
+
+build-config_v1_without_update.bat 为不更新svn，直接以本地当前内容打包

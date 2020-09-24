@@ -80,13 +80,13 @@ function execConfigBin() {
 	console.log("文件转换完成了");
 	compressZip();
 	if(isBase){
-		// savetsFile("BaseConfigKeys", creatCfgKeyObject("BaseConfigKeys", fileNameList));
-		// 生成BaseBean
+		savetsFile("BaseConfigKeys", creatCfgKeyObject("BaseConfigKeys", fileNameList));
+		//生成BaseBean
 		// savetsFile("BaseBean", creatBaseConfig("BaseBean"));
-		// let ss = creatCfgEnum("ConfigEnumBase", fileNameList); //生成配置枚举文件
-		// savetsFile("ConfigEnumBase", ss);
+		let ss = creatCfgEnum("ConfigEnumBase", fileNameList); //生成配置枚举文件
+		savetsFile("ConfigEnumBase", ss);
 		//生成ConfigDB
-		// savetsFile("ConfigDBBase", allCfgClassStr);
+		savetsFile("ConfigDBBase", allCfgClassStr);
 	} else {
 		let ss = creatCfgEnum("ConfigEnum", fileNameList); //生成配置枚举文件
 		savetsFile("ConfigEnum", ss);
